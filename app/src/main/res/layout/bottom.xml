@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/id_tab_weixin"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:descendantFocusability="beforeDescendants">
+        <ImageButton
+            android:id="@+id/mapView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:background="@color/gray"
+            android:src="@drawable/d" />
+        <TextView
+            android:text="@string/positioning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_tab_frd"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:descendantFocusability="beforeDescendants">
+
+        <ImageButton
+            android:id="@+id/id_tab_frd_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:clickable="false"
+            android:src="@drawable/l"/>
+        <TextView
+            android:text="@string/history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_tab_address"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:descendantFocusability="beforeDescendants">
+
+        <ImageButton
+            android:id="@+id/id_tab_address_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:clickable="false"
+            android:src="@drawable/p" />
+        <TextView
+            android:text="@string/Set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:orientation="vertical"
+	android:layout_height="match_parent"
+	android:layout_width="match_parent">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/colorPrimary"
+		android:id="@+id/linearLayout">
+
+		<Button
+			android:id="@+id/baby_shw"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/baby_height_weight"
+			android:layout_margin="5dp"
+			android:textColor="@color/white"
+			android:background="@color/transparent"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_marginTop="30dp">
+
+        <ImageView
+			android:id="@+id/shwgender"
+			android:layout_width="25dp"
+			android:layout_height="match_parent"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginLeft="10dp"
+			android:src="@drawable/male" />
+
+		<ImageView
+            android:id="@+id/shwbabyimage"
+            android:layout_width="wrap_content"
+            android:layout_height="222dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.82"
+            android:src="@drawable/boy128" />
+
+		<RelativeLayout
+			android:id="@+id/rlhh"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp">
+
+			<ScrollView
+				android:id="@+id/svh"
+				android:layout_width="100dp"
+				android:layout_height="150dp"
+				android:scrollbars="none">
+
+				<ImageView
+					android:id="@+id/ivheightrule"
+					android:layout_width="80dp"
+					android:layout_height="1262dp"
+					android:adjustViewBounds="true"
+					android:src="@drawable/s_height_rule" />
+			</ScrollView>
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignRight="@+id/svh"
+				android:layout_centerVertical="true"
+				android:adjustViewBounds="true"
+				android:src="@drawable/pointer24" />
+		</RelativeLayout>
+    </LinearLayout>
+
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+    	<TextView
+                android:id="@+id/shwweightvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:textColor="@color/orangered"
+    	    android:textSize="20sp"
+                android:text=""/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/rlww"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="150dp"
+        android:layout_height="120dp">
+		<HorizontalScrollView
+		     android:id="@+id/svw"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:scrollbars="none" >
+
+                <ImageView
+                    android:id="@+id/ivweightrule"
+                    android:layout_width="1262dp"
+                    android:layout_height="60dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/s_weight_rule" />
+        </HorizontalScrollView>
+        <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" 
+                    android:layout_alignParentTop="true"  
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/pointerup24" />
+		 </RelativeLayout>
+	 </LinearLayout>
+	  
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+		<Button
+        android:id="@+id/submit_btn"
+        android:textSize="30px"
+        android:textColor="@color/white"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/button"
+        android:text="@string/modifyconfirm" />
+    </LinearLayout>
+    
+</LinearLayout>

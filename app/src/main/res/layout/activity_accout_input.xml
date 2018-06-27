@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:childrenwatch="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.jyz.childrenwatch.TitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        childrenwatch:backBtnText="@string/reg_account"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:divider="@drawable/spacer_medium"
+        android:showDividers="middle"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:text="@string/china_86"/>
+
+            <EditText
+                android:id="@+id/account_edit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:hint="@string/please_enter_your_mobile_number"/>
+        </LinearLayout>
+
+    
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/account_tips"/>
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/next_step"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/agree_chb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/i_have_read_and_agree"/>
+
+            <TextView
+                android:id="@+id/user_ver_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:text="@string/user_agreement"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
