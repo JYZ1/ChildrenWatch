@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.jyz.childrenwatch.activity.reg.FillVerificationActivity;
-
 /**
  * Created by Administrator on 2018/1/2.
  */
@@ -49,7 +47,7 @@ public class RelativesActivity extends AppCompatActivity {
                             Toast.makeText(RelativesActivity.this, R.string.please_enter, Toast.LENGTH_SHORT).show();
                         }
                         else {
-                            Intent intent = new Intent(RelativesActivity.this, FillVerificationActivity.class);
+                            Intent intent = new Intent(RelativesActivity.this, PositioningActivity.class);
                             startActivity(intent);
                         }
                     }
