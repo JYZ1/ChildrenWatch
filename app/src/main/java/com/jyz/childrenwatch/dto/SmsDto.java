@@ -1,10 +1,10 @@
-package com.jyz.childrenwatch.Entity;
+package com.jyz.childrenwatch.dto;
 
 /**
  * Created by Administrator on 2018/6/22.
  */
 
-public class SmsEn {
+public class SmsDto {
     private String phoneNo;
     private Integer smsType;
     private String content;

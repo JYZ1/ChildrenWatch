@@ -1,6 +1,6 @@
-package com.jyz.childrenwatch.Entity;
+package com.jyz.childrenwatch.dto;
 
-public class BaseEn {
+public class BaseDto {
     private Long userAccount;
     private String userPassword;
     private String imei;

@@ -1,4 +1,4 @@
-package com.jyz.childrenwatch;
+package com.jyz.childrenwatch.activity;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -18,6 +18,7 @@ import com.amap.api.location.AMapLocationListener;
 import com.amap.api.maps.AMap;
 import com.amap.api.maps.MapView;
 import com.amap.api.maps.model.MyLocationStyle;
+import com.jyz.childrenwatch.R;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

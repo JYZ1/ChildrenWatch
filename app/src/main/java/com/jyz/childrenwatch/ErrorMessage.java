@@ -7,13 +7,16 @@ import android.widget.Toast;
 import com.jyz.childrenwatch.R;
 
 public class ErrorMessage {
-    public static final String IS_NOT_REGISTERED = "-1";
+    public static final String SUCCESS = "1";
+    public static final String FAIL = "0";
+    public static final String ACCOUNT_REGISTERED = "-1";
+    public static final String ACCOUNT_NOT_REGISTERED = "-2";
     public static final String NETWORK_ERROR = "-16";
 
     public static void showMessage(final Context context, String errorCode) {
         int resId = 0;
         switch (errorCode) {
-            case IS_NOT_REGISTERED:
+            case ACCOUNT_REGISTERED:
                 resId = R.string.Account_registered;
                 break;
             case NETWORK_ERROR:

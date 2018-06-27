@@ -1,4 +1,4 @@
-package com.jyz.childrenwatch.Entity;
+package com.jyz.childrenwatch.json;
 
 import java.util.Date;
 import java.util.List;

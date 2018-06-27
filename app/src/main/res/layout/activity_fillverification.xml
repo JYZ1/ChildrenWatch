@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.jyz.childrenwatch.TitleLayout
+    <com.jyz.childrenwatch.activity.TitleLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         childrenwatch:backBtnText="@string/Fill_in_the_verification_code" />

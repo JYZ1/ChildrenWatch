@@ -1,4 +1,4 @@
-package com.jyz.childrenwatch;
+package com.jyz.childrenwatch.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,6 +8,8 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+
+import com.jyz.childrenwatch.R;
 
 import java.util.ArrayList;
 import java.util.List;

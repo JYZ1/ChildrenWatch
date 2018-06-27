@@ -1,10 +1,10 @@
-package com.jyz.childrenwatch.Entity;
+package com.jyz.childrenwatch.dto;
 
 /**
  * Created by Administrator on 2018/6/22.
  */
 
-public class RegsterEn extends BaseEn{
+public class RegsterDto extends BaseDto {
     private String userName;
 
     public String getUserName() {

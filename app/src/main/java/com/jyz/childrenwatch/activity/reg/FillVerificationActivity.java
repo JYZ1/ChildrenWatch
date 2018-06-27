@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.jyz.childrenwatch.LoginActivity;
+import com.jyz.childrenwatch.activity.LoginActivity;
 import com.jyz.childrenwatch.R;
 
 import java.util.Timer;

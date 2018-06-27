@@ -14,8 +14,8 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.jyz.childrenwatch.R;
 import com.jyz.childrenwatch.ErrorMessage;
-import com.jyz.childrenwatch.Entity.BaseEn;
-import com.jyz.childrenwatch.Entity.CommResponse;
+import com.jyz.childrenwatch.dto.BaseDto;
+import com.jyz.childrenwatch.json.CommResponse;
 import com.jyz.childrenwatch.net.HttpCallbackListener;
 import com.jyz.childrenwatch.net.HttpUtil;
 import com.jyz.childrenwatch.constants.UrlConstants;
@@ -49,25 +49,25 @@ public class AccountInputActivity extends AppCompatActivity {
                     return;
                 }
 
-                BaseEn baseEn = new BaseEn();
-                baseEn.setUserAccount(Long.valueOf(account));
-                baseEn.setProtocolVer("0");
+                BaseDto baseDto = new BaseDto();
+                baseDto.setUserAccount(Long.valueOf(account));
+                baseDto.setProtocolVer("0");
                 final Gson gson = new Gson();
-                String data = gson.toJson(baseEn);
+                String data = gson.toJson(baseDto);
 
                 HttpUtil.sendHttpRequest(UrlConstants.ISREGISTERED_URL, data, new HttpCallbackListener() {
                     @Override
                     public void onFinish(String response) {
                         if (null != response) {
                             CommResponse commResponse = gson.fromJson(response, CommResponse.class);
-                            String errorCode = commResponse.getRetFlag();
+                            String retFlag = commResponse.getRetFlag();
 
-                            if ((errorCode.equals(ErrorMessage.IS_NOT_REGISTERED))) {
+                            if (retFlag.equals(ErrorMessage.SUCCESS)) {
                                 Intent intent = new Intent(AccountInputActivity.this, FillInActivity.class);
                                 intent.putExtra("phone", account);
                                 startActivity(intent);
                             } else {
-                                ErrorMessage.showMessage(AccountInputActivity.this, errorCode);
+                                ErrorMessage.showMessage(AccountInputActivity.this, retFlag);
                             }
                         }
                     }

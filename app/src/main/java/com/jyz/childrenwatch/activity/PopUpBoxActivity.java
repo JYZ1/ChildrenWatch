@@ -1,4 +1,4 @@
-package com.jyz.childrenwatch;
+package com.jyz.childrenwatch.activity;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.jyz.childrenwatch.R;
 
 /**
  * Created by Administrator on 2018/1/4.

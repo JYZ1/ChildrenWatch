@@ -56,27 +56,26 @@
             android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name=".LoginActivity">
+        <activity android:name=".activity.LoginActivity">
                 <intent-filter>
                     <action android:name="android.intent.action.MAIN" />
                     <category android:name="android.intent.category.LAUNCHER" />
                 </intent-filter>
         </activity>
         <activity android:name=".activity.reg.AccountInputActivity"></activity>
-        <activity android:name=".ForgetPasswordActivity"></activity>
+        <activity android:name=".activity.ForgetPasswordActivity"></activity>
         <activity android:name=".activity.reg.UserAgreementActivity"></activity>
         <activity android:name=".activity.reg.FillInActivity"></activity>
-        <activity android:name=".AddToActivity"></activity>
-        <activity android:name=".PositioningActivity"></activity>
-        <activity android:name=".BabyHWActivity"></activity>
-        <activity android:name=".RelativesActivity"></activity>
+        <activity android:name=".activity.AddToActivity"></activity>
+        <activity android:name=".activity.PositioningActivity"></activity>
+        <activity android:name=".activity.BabyHWActivity"></activity>
+        <activity android:name=".activity.RelativesActivity"></activity>
         <activity android:name=".activity.reg.FillVerificationActivity"></activity>
-        <activity android:name=".BabyInformationActivity"></activity>
-        <activity android:name=".GaoDeActivity"></activity>
+        <activity android:name=".activity.BabyInformationActivity"></activity>
 
         <service android:name="com.baidu.location.f"
-            android:enabled="true"
-            android:process=":remote">
+                 android:enabled="true"
+                 android:process=":remote">
         </service>
         <service android:name="com.amap.api.location.APSService" >
         </service>

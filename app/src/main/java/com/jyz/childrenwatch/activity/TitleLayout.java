@@ -1,4 +1,4 @@
-package com.jyz.childrenwatch;
+package com.jyz.childrenwatch.activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+
+import com.jyz.childrenwatch.R;
 
 public class TitleLayout extends LinearLayout {
     public TitleLayout(Context context, @Nullable AttributeSet attrs) {

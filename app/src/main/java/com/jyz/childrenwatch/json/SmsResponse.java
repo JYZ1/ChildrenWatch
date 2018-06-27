@@ -1,4 +1,4 @@
-package com.jyz.childrenwatch.Entity;
+package com.jyz.childrenwatch.json;
 
 /**
  * Created by Administrator on 2018/6/22.

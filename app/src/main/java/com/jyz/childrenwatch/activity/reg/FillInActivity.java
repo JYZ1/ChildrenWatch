@@ -10,10 +10,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
-import com.jyz.childrenwatch.Entity.RegsterEn;
-import com.jyz.childrenwatch.Entity.SmsEn;
-import com.jyz.childrenwatch.Entity.SmsResponse;
-import com.jyz.childrenwatch.LoginActivity;
+import com.jyz.childrenwatch.dto.RegsterDto;
+import com.jyz.childrenwatch.dto.SmsDto;
+import com.jyz.childrenwatch.json.SmsResponse;
+import com.jyz.childrenwatch.activity.LoginActivity;
 import com.jyz.childrenwatch.R;
 import com.jyz.childrenwatch.constants.UrlConstants;
 import com.jyz.childrenwatch.net.HttpCallbackListener;
@@ -89,14 +89,14 @@ public class FillInActivity extends AppCompatActivity {
                     Toast.makeText(FillInActivity.this, R.string.Password_length_must_be_greater_than_six_digits_and_less_than_twenty_digits, Toast.LENGTH_SHORT).show();
                 }
 
-                RegsterEn regsterEn = new RegsterEn();
-                regsterEn.setUserAccount(Long.valueOf(mPhoneNum));
-                regsterEn.setUserPassword(passWd);
-                regsterEn.setUserName("");
-                regsterEn.setProtocolVer("0");
+                RegsterDto regsterDto = new RegsterDto();
+                regsterDto.setUserAccount(Long.valueOf(mPhoneNum));
+                regsterDto.setUserPassword(passWd);
+                regsterDto.setUserName("");
+                regsterDto.setProtocolVer("0");
 
                 final Gson gson = new Gson();
-                String data = gson.toJson(regsterEn);
+                String data = gson.toJson(regsterDto);
                 HttpUtil.sendHttpRequest(UrlConstants.REGISTER_URL, data, new HttpCallbackListener() {
                     @Override
                     public void onFinish(String response) {
@@ -156,13 +156,13 @@ public class FillInActivity extends AppCompatActivity {
     }
 
     public void getVerCode() {
-        SmsEn smsEn = new SmsEn();
-        smsEn.setPhoneNo(mPhoneNum);
-        smsEn.setSmsType(1);
-        smsEn.setContent("");
+        SmsDto smsDto = new SmsDto();
+        smsDto.setPhoneNo(mPhoneNum);
+        smsDto.setSmsType(1);
+        smsDto.setContent("");
 
         final Gson gson = new Gson();
-        String data = gson.toJson(smsEn);
+        String data = gson.toJson(smsDto);
         HttpUtil.sendHttpRequest(UrlConstants.SEND_SMS_URL, data, new HttpCallbackListener() {
             @Override
             public void onFinish(String response) {

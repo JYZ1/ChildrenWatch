@@ -1,4 +1,4 @@
-package com.jyz.childrenwatch;
+package com.jyz.childrenwatch.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +9,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
-import com.jyz.childrenwatch.Entity.BaseEn;
-import com.jyz.childrenwatch.Entity.LoginResponse;
+import com.jyz.childrenwatch.dto.BaseDto;
+import com.jyz.childrenwatch.json.LoginResponse;
+import com.jyz.childrenwatch.R;
 import com.jyz.childrenwatch.constants.UrlConstants;
 import com.jyz.childrenwatch.net.HttpCallbackListener;
 import com.jyz.childrenwatch.net.HttpUtil;
@@ -44,13 +45,13 @@ public class LoginActivity extends AppCompatActivity {
                 String account = mAccountEdit.getText().toString();
                 String password = mPasswordEdit.getText().toString();
 
-                BaseEn baseEn = new BaseEn();
-                baseEn.setUserAccount(Long.valueOf(account));
-                baseEn.setUserPassword(password);
-                baseEn.setProtocolVer("0");
+                BaseDto baseDto = new BaseDto();
+                baseDto.setUserAccount(Long.valueOf(account));
+                baseDto.setUserPassword(password);
+                baseDto.setProtocolVer("0");
 
                 final Gson gson = new Gson();
-                String data = gson.toJson(baseEn);
+                String data = gson.toJson(baseDto);
                 HttpUtil.sendHttpRequest(UrlConstants.LOGIN_URL, data, new HttpCallbackListener() {
                     @Override
                     public void onFinish(String response) {

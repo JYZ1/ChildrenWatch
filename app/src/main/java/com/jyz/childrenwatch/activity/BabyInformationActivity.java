@@ -1,4 +1,4 @@
-package com.jyz.childrenwatch;
+package com.jyz.childrenwatch.activity;
 
 import android.Manifest;
 import android.annotation.TargetApi;
@@ -26,6 +26,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.jyz.childrenwatch.R;
 
 import java.io.File;
 import java.io.FileNotFoundException;
