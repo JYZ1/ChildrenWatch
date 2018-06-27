@@ -41,9 +41,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <meta-data
-            android:name="com.baidu.lbsapi.API_KEY"
-            android:value="LHCl9HNhLdICGpMTpDgnUvypHKswOB78"/>
+
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="4bc21216b560655a4d08aa9243b93213" />
@@ -59,18 +57,18 @@
         </provider>
 
         <activity android:name=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
         </activity>
         <activity android:name=".activity.reg.AccountInputActivity"></activity>
         <activity android:name=".ForgetPasswordActivity"></activity>
         <activity android:name=".activity.reg.UserAgreementActivity"></activity>
         <activity android:name=".activity.reg.FillInActivity"></activity>
         <activity android:name=".AddToActivity"></activity>
-        <activity android:name=".BabyHWActivity"></activity>
         <activity android:name=".PositioningActivity"></activity>
+        <activity android:name=".BabyHWActivity"></activity>
         <activity android:name=".RelativesActivity"></activity>
         <activity android:name=".activity.reg.FillVerificationActivity"></activity>
         <activity android:name=".BabyInformationActivity"></activity>

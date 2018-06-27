@@ -49,7 +49,6 @@ public class PositioningActivity extends FragmentActivity implements View.OnClic
     private void initDatas() {
         mFragments = new ArrayList<>();
         //将三个Fragment加入集合中
-        //mFragments.add(new PositioningFragment());
         mFragments.add(new GaoDeFragment());
         mFragments.add(new NewsFragment());
         mFragments.add(new SetFragment());

@@ -1,84 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:childrenwatch="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray">
+    android:background="@color/gray"
+    android:orientation="vertical">
+
+    <com.jyz.childrenwatch.TitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        childrenwatch:backBtnText="@string/Fill_in_the_verification_code_and_password" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:id="@+id/linearLayout">
+        android:layout_height="match_parent"
+        android:divider="@drawable/spacer_medium"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:showDividers="middle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="验证码已发送到："
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/numText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/spacer_medium"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/smsEdit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:hint="@string/four_SMS_verification_code"
+                android:inputType="phone"
+                android:maxLength="4" />
+
+            <Button
+                android:id="@+id/countdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/pasEdit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/Fill_in_the_password" />
 
         <Button
-            android:id="@+id/fill_In"
-            android:layout_width="wrap_content"
+            android:id="@+id/create"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Fill_in_the_verification_code_and_password"
-            android:layout_margin="5dp"
-            android:textColor="@color/white"
-            android:background="@color/transparent"/>
-
+            android:background="@drawable/button"
+            android:text="@string/Create_an_account_and_login"
+            android:textColor="@color/white" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="验证码已发送到："
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/linearLayout"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="20dp"/>
-
-    <TextView
-        android:id="@+id/numText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:layout_alignTop="@+id/text"
-        android:layout_toRightOf="@+id/text"
-        android:layout_toEndOf="@+id/text" />
-
-    <EditText
-        android:id="@+id/smsEdit"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/text"
-        android:layout_alignLeft="@+id/text"
-        android:background="@color/white"
-        android:hint="@string/four_SMS_verification_code"/>
-
-    <Button
-        android:id="@+id/countdown"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_alignBottom="@+id/smsEdit"
-        android:layout_alignRight="@+id/create"
-        android:layout_alignEnd="@+id/create"
-        android:enabled="false"/>
-
-    <EditText
-        android:id="@+id/pasEdit"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@+id/smsEdit"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_margin="20dp"
-        android:background="@color/white"
-        android:hint="@string/Fill_in_the_password" />
-
-    <Button
-        android:id="@+id/create"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="25dp"
-        android:textColor="@color/white"
-        android:layout_below="@+id/pasEdit"
-        android:text="@string/Create_an_account_and_login"
-        android:background="@drawable/button" />
-
-</RelativeLayout>
+</LinearLayout>

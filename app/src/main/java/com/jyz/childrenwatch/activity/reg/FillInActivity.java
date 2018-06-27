@@ -61,15 +61,6 @@ public class FillInActivity extends AppCompatActivity {
         countdown = (Button) findViewById(R.id.countdown);
         mCreate = (Button) findViewById(R.id.create);
 
-        fillIn = (Button) findViewById(R.id.fill_In);
-        fillIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(FillInActivity.this, AccountInputActivity.class);
-                startActivity(intent);
-            }
-        });
-
         smsEdit = (EditText) findViewById(R.id.smsEdit);
         mPasEdit = (EditText) findViewById(R.id.pasEdit);
 
@@ -94,7 +85,7 @@ public class FillInActivity extends AppCompatActivity {
                 if (smsEdit.getText().length() != VCODE_LEN) {
                     Toast.makeText(FillInActivity.this, R.string.Verification_code_is_4_digits, Toast.LENGTH_SHORT).show();
                 }
-                if (mPasEdit.getText().length() >= PASSWD_LEN && mPasEdit.getText().length() <= TWENTY) {
+                if (mPasEdit.getText().length() < PASSWD_LEN && mPasEdit.getText().length() > TWENTY) {
                     Toast.makeText(FillInActivity.this, R.string.Password_length_must_be_greater_than_six_digits_and_less_than_twenty_digits, Toast.LENGTH_SHORT).show();
                 }
 

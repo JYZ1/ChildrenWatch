@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:childrenwatch="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <com.jyz.childrenwatch.TitleLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        childrenwatch:backBtnText="@string/user_agreement_2"/>
+        childrenwatch:backBtnText="@string/user_agreement_2" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="30dp"
         android:text="@string/Agreement_range"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
 </LinearLayout>

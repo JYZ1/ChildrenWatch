@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 public class ForgetPasswordActivity extends AppCompatActivity {
 
-    private Button mRecallThePsw;
     private EditText mPhoneNumber;
     private Button mCarryOut;
 
@@ -26,15 +25,6 @@ public class ForgetPasswordActivity extends AppCompatActivity {
         setContentView(R.layout.activity_forgetpassword );
 
         mPhoneNumber = (EditText) findViewById(R.id.phoneNumber);
-
-        mRecallThePsw = (Button) findViewById(R.id.recall_the_password);
-        mRecallThePsw.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ForgetPasswordActivity.this, LoginActivity.class);
-                startActivity(intent);
-            }
-        });
 
 
         mCarryOut = (Button) findViewById(R.id.carry_out);

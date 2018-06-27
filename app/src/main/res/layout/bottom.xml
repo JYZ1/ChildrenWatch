@@ -9,22 +9,24 @@
         android:id="@+id/id_tab_weixin"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:layout_weight="1"
+        android:descendantFocusability="beforeDescendants"
         android:gravity="center"
-        android:descendantFocusability="beforeDescendants">
+        android:orientation="vertical">
+
         <ImageButton
             android:id="@+id/mapView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:clickable="false"
             android:background="@color/gray"
+            android:clickable="false"
             android:src="@drawable/d" />
+
         <TextView
-            android:text="@string/positioning"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="@string/positioning" />
     </LinearLayout>
 
     <LinearLayout
@@ -32,9 +34,9 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:descendantFocusability="beforeDescendants"
         android:gravity="center"
-        android:orientation="vertical"
-        android:descendantFocusability="beforeDescendants">
+        android:orientation="vertical">
 
         <ImageButton
             android:id="@+id/id_tab_frd_img"
@@ -42,23 +44,24 @@
             android:layout_height="wrap_content"
             android:background="@color/gray"
             android:clickable="false"
-            android:src="@drawable/l"/>
+            android:src="@drawable/l" />
+
         <TextView
-            android:text="@string/history"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="@string/history" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/id_tab_address"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
         android:layout_gravity="center"
+        android:layout_weight="1"
+        android:descendantFocusability="beforeDescendants"
         android:gravity="center"
-        android:orientation="vertical"
-        android:descendantFocusability="beforeDescendants">
+        android:orientation="vertical">
 
         <ImageButton
             android:id="@+id/id_tab_address_img"
@@ -67,11 +70,12 @@
             android:background="@color/gray"
             android:clickable="false"
             android:src="@drawable/p" />
+
         <TextView
-            android:text="@string/Set"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="@string/Set" />
 
     </LinearLayout>
 </LinearLayout>

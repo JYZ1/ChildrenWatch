@@ -1,60 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:childrenwatch="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray">
+    android:orientation="vertical">
+
+    <com.jyz.childrenwatch.TitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        childrenwatch:backBtnText="@string/Fill_in_the_verification_code" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:id="@+id/linearLayout">
+        android:layout_height="match_parent"
+        android:divider="@drawable/spacer_medium"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout"
+            android:text="@string/Please_ask_the_administrator_xxxxxxxxxxx_for_the_verification_code"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/spacer_medium"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:hint="@string/four_SMS_verification_code"
+                android:inputType="phone"
+                android:maxLength="4" />
+
+            <Button
+                android:id="@+id/buttontime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false" />
+        </LinearLayout>
 
         <Button
-            android:id="@+id/fill_In"
-            android:layout_width="wrap_content"
+            android:id="@+id/count"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Fill_in_the_verification_code_and_password"
-            android:layout_margin="5dp"
-            android:textColor="@color/white"
-            android:background="@color/transparent"/>
-
+            android:text="@string/verification" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="@string/Please_ask_the_administrator_xxxxxxxxxxx_for_the_verification_code"
-        android:textSize="18sp"
-        android:layout_margin="20dp"
-        android:layout_below="@+id/linearLayout" />
-
-    <EditText
-        android:id="@+id/edit"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/text"
-        android:layout_alignLeft="@+id/text"
-        android:background="@color/white"
-        android:hint="@string/four_SMS_verification_code"/>
-
-    <Button
-        android:id="@+id/buttontime"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/text"
-        android:layout_alignRight="@+id/count"
-        android:enabled="false"/>
-
-    <Button
-        android:id="@+id/count"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="@string/verification"
-        android:layout_margin="35dp"
-        android:layout_below="@+id/edit"
-        android:layout_centerHorizontal="true" />
-
-</RelativeLayout>
+</LinearLayout>

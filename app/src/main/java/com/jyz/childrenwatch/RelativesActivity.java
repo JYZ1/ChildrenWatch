@@ -13,21 +13,11 @@ import android.widget.Toast;
 
 public class RelativesActivity extends AppCompatActivity {
     private Button mOther;
-    private Button mBabyBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_relatives );
-
-        mBabyBtn = (Button) findViewById(R.id.button);
-        mBabyBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(RelativesActivity.this, AddToActivity.class);
-                startActivity(intent);
-            }
-        });
 
         mOther = (Button) findViewById(R.id.other);
         mOther.setOnClickListener(new View.OnClickListener() {

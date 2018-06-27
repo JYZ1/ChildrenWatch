@@ -74,11 +74,7 @@ public class GaoDeActivity extends AppCompatActivity implements LocationSource, 
 
         //开始定位
         initLoc();
-
-
     }
-
-
     //定位
     private void initLoc() {
         //初始化定位
@@ -164,7 +160,7 @@ public class GaoDeActivity extends AppCompatActivity implements LocationSource, 
         //设置图钉选项
         MarkerOptions options = new MarkerOptions();
         //图标
-        options.icon(BitmapDescriptorFactory.fromResource(R.mipmap.black));
+        options.icon(BitmapDescriptorFactory.fromResource(R.drawable.boy32));
         //位置
         options.position(new LatLng(amapLocation.getLatitude(), amapLocation.getLongitude()));
         StringBuffer buffer = new StringBuffer();

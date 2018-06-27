@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.jyz.childrenwatch.Entity.BaseEn;
@@ -55,7 +56,13 @@ public class LoginActivity extends AppCompatActivity {
                     public void onFinish(String response) {
                         if(response != null) {
                             LoginResponse loginResponse = gson.fromJson(response, LoginResponse.class);
-
+                            if(loginResponse.getRetFlag().equals("1")) {
+                                Intent intent = new Intent(LoginActivity.this, AddToActivity.class);
+                                startActivity(intent);
+                            }
+                            else{
+                                Toast.makeText(LoginActivity.this, R.string.registration_failed, Toast.LENGTH_SHORT).show();
+                            }
                         }
                     }
 
@@ -64,9 +71,6 @@ public class LoginActivity extends AppCompatActivity {
 
                     }
                 });
-
-                Intent intent = new Intent(LoginActivity.this, AddToActivity.class);
-                startActivity(intent);
             }
         });
 
