@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.jyz.childrenwatch.ErrorMessage;
 import com.jyz.childrenwatch.dto.BaseDto;
 import com.jyz.childrenwatch.json.LoginResponse;
 import com.jyz.childrenwatch.R;
@@ -57,18 +58,21 @@ public class LoginActivity extends AppCompatActivity {
                     public void onFinish(String response) {
                         if(response != null) {
                             LoginResponse loginResponse = gson.fromJson(response, LoginResponse.class);
-                            if(loginResponse.getRetFlag().equals("1")) {
-                                Intent intent = new Intent(LoginActivity.this, AddToActivity.class);
+                            String retFlag = loginResponse.getRetFlag();
+
+                            if(retFlag.equals(ErrorMessage.SUCCESS)) {
+                                Intent intent = new Intent(LoginActivity.this, PositioningActivity.class);
                                 startActivity(intent);
                             }
                             else{
-                                Toast.makeText(LoginActivity.this, R.string.registration_failed, Toast.LENGTH_SHORT).show();
+                                ErrorMessage.showMessage(LoginActivity.this, retFlag);
                             }
                         }
                     }
 
                     @Override
                     public void onError(Exception e) {
+                        ErrorMessage.showMessage(LoginActivity.this, ErrorMessage.NETWORK_ERROR);
 
                     }
                 });

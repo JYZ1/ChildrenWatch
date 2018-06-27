@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.jyz.childrenwatch.ErrorMessage;
 import com.jyz.childrenwatch.dto.RegsterDto;
 import com.jyz.childrenwatch.dto.SmsDto;
 import com.jyz.childrenwatch.json.SmsResponse;
@@ -101,19 +102,20 @@ public class FillInActivity extends AppCompatActivity {
                     @Override
                     public void onFinish(String response) {
                         SmsResponse smsResponse = gson.fromJson(response, SmsResponse.class);
+                        String retFlag = smsResponse.getRetFlag();
 
-                        if (smsResponse.getRetFlag().equals("1")) {
+                        if (retFlag.equals(ErrorMessage.SUCCESS)) {
                             Intent intent = new Intent(FillInActivity.this, LoginActivity.class);
                             intent.putExtra("phone", mPhoneNum);
                             startActivity(intent);
-                        } else if (smsResponse.getRetFlag().equals("0")) {
-                            Toast.makeText(FillInActivity.this, R.string.registration_failed, Toast.LENGTH_SHORT).show();
+                        } else  {
+                            ErrorMessage.showMessage(FillInActivity.this, retFlag);
                         }
                     }
 
                     @Override
                     public void onError(Exception e) {
-
+                        ErrorMessage.showMessage(FillInActivity.this, ErrorMessage.NETWORK_ERROR);
                     }
                 });
             }
